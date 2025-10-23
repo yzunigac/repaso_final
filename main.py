@@ -81,7 +81,7 @@ def consultar_ventas():
             print('\nventas registradas:')
             df['subtotal'] = df['cantidad'] * df['precio']
             total_ventas = df['subtotal'].sum()
-            print(f'total de ventas: {total :.2f}')
+            print(f'total de ventas: {total_ventas:.2f}')
 
             producto_mas_vendido = df.groupby('producto')['cantidad'].sum().idxmax()
             print(f'producto mas vendido: {producto_mas_vendido}')
